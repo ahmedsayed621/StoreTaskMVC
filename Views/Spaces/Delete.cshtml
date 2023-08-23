@@ -1,0 +1,29 @@
+﻿@model Space
+
+<style>
+    th {
+        text-align: center !important;
+    }
+</style>
+
+<br />
+
+
+<center>
+    <a asp-controller="Stores" asp-action="Details" asp-route-id="@Model.StoreId" class="btn btn-primary">Back To Data</a>
+    <a asp-controller="Spaces" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edit</a>
+</center>
+
+
+<form asp-controller="Spaces" asp-action="Delete" class="form-group">
+    <div class="mb-3">
+        <label asp-for=Name class="form-label">Space Name</label>
+        <input asp-for=Name type="text" class="form-control" id="exampleFormControlInput1" placeholder="@Model.StoreName" disabled>
+    </div>
+
+
+    <br />
+
+    <input type="submit" value="Delete" class="btn btn-primary" />
+
+</form>

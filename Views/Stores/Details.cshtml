@@ -1,0 +1,146 @@
+﻿@model StoreTaskMVC.Models.Store
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<style>
+    th {
+        text-align: center !important;
+    }
+</style>
+
+<br />
+
+
+<center>
+    <a asp-controller="Stores" asp-action="Index" class="btn btn-primary">Back To Data</a>
+    <a asp-controller="Stores" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edit</a>
+</center>
+
+<div class="mb-3">
+    <label asp-for=StoreName class="form-label">Store Name</label>
+    <input asp-for=StoreName type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" disabled>
+</div>
+<div class="mb-3">
+    <label asp-for=Address class="form-label">Address</label>
+    <textarea asp-for=Address class="form-control" id="exampleFormControlTextarea1" rows="3" disabled></textarea>
+</div>
+
+@{
+    if(Model.IsMain==true)
+    {
+        <div class="form-check form-switch">
+            <input asp-for=IsMain class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled" checked disabled>
+            <label class="form-check-label" asp-for=IsMain>Is Main</label>
+        </div>
+    }
+    else
+    {
+        <div class="form-check form-switch">
+            <input asp-for=IsMain class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled"  disabled>
+            <label class="form-check-label" asp-for=IsMain>Is Main</label>
+        </div>
+    }
+}
+
+@{
+    if(Model.IsInvoiceDirect==true)
+    {
+        <div class="form-check form-switch">
+            <input asp-for=IsInvoiceDirect class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckCheckedDisabled" checked disabled>
+            <label class="form-check-label" asp-for=IsInvoiceDirect>Is Invoice Direct</label>
+        </div>
+    }
+    else
+    {
+        <div class="form-check form-switch">
+            <input asp-for=IsInvoiceDirect class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckCheckedDisabled"  disabled>
+            <label class="form-check-label" asp-for=IsInvoiceDirect>Is Invoice Direct</label>
+        </div>
+    }
+}
+
+
+
+
+
+<h3>Spaces</h3>
+
+
+<div class="container">
+    <div class="text-center my-5">
+        
+        <hr />
+    </div>
+
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card mb-5 shadow-sm">
+                
+                @foreach(var item in @ViewBag.Spaces)
+                {
+                    if(item.StoreId==Model.Id)
+                    {
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h2>@item.Name</h2>
+                            </div>
+                            <div class="card-text">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Deleniti corporis quis ab. Exercitationem et quibusdam
+                                    impedit? Sint vitae labore nulla sit, dignissimos non tempore,
+                                    maxime facere, quod harum aliquid in...
+                                </p>
+                            </div>
+                            <a asp-controller="Spaces" asp-action="Create" class="btn btn-success rounded-0 float-end">Split</a>
+                            <a asp-controller="Spaces" asp-action="Edit" class="btn btn-primary rounded-0 float-end">Edit</a>
+                            <a asp-controller="Spaces" asp-action="Merge" class="btn btn-secondary rounded-0 float-end">Merge</a>
+                            <a asp-controller="Spaces" asp-action="Details" class="btn btn-info rounded-0 float-end">Products</a>
+                        </div>
+                    }
+                }
+                
+            </div>
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*<div class="demo-checkbox">
+    <input type="checkbox" asp-for="IsMain" checked="" disabled>
+    <label asp-for="IsMain">Is Main</label>
+</div>
+<br />
+
+<div class="demo-checkbox">
+    <input type="checkbox" asp-for="IsInvoiceDirect" checked="" disabled>
+    <label asp-for="IsInvoiceDirect">Is Invoice Direct</label>
+</div>
+<br />*@
+
+

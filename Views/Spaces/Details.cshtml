@@ -1,0 +1,81 @@
+﻿@model Space
+
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<style>
+    th {
+        text-align: center !important;
+    }
+</style>
+
+<br />
+
+
+<center>
+    <a asp-controller="Stores" asp-action="Details" asp-route-id="@Model.StoreId" class="btn btn-primary">Back To Data</a>
+    <a asp-controller="Spaces" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edit</a>
+</center>
+
+<div class="mb-3">
+    <label asp-for=Name class="form-label">Store Name</label>
+    <input asp-for=Name type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" disabled>
+</div>
+
+
+
+<h3>Products</h3>
+
+<div class="container-fluid">
+    <div class="row clearfix">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="card">
+                <div class="header">
+                    <h2 style="margin-left:10px;">Stores List</h2>
+
+                </div>
+                <div class="body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped table-hover js-basic-example dataTable text-center font-weight-bold">
+                            <thead>
+                                <tr>
+
+                                    <th>Name</th>
+                                    <th>Address</th>
+                                    <th>IsMain</th>
+                                    <th>IsInvoiceDirect</th>
+
+                                    <th>Actions</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.Products)
+                                {
+                                    if(item.SpaceId == Model.Id)
+                                    {
+                                        <tr>
+
+                                            <td>@item.ProductName</td>
+                                            <td>@item.Count</td>
+
+
+
+                                            <td>
+                                                <a asp-controller="Products" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">Update</a>
+                                                <a asp-controller="Products" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                                            </td>
+                                        </tr>
+                                    }
+                                    
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

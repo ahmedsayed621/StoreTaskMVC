@@ -1,0 +1,23 @@
+/.vs
+wwwroot/lib/
+wwwroot/css/
+wwwroot/js/
+wwwroot/plugins/
+wwwroot/uploads/
+
+# Ignore the wwwroot/lib folder
+wwwroot/lib/
+
+# Ignore the wwwroot/dist folder
+wwwroot/dist/
+
+# Ignore all .min.css and .min.js files
+*.min.css
+*.min.js
+
+# Ignore the _build and _site folders
+_build/
+_site/
+
+# Ignore the Properties folder
+Properties/

@@ -1,0 +1,29 @@
+﻿@model Space
+
+
+<br />
+
+<a asp-controller="Stores" asp-action="Details" asp-route-id="@Model.StoreId" class="btn btn-primary">Back To Data</a>
+
+<br />
+
+<h2>Edit</h2>
+
+<form asp-controller="Spaces" asp-action="Edit" class="form-group">
+
+    
+
+
+    <label asp-for="Name">Space Name</label>
+    <input type="text" class="form-control" asp-for="Name" />
+    <span asp-validation-for="Name" class="text-danger"></span>
+    <br />
+
+    <center>
+        <input type="submit" class="btn btn-primary" value="Edit" />
+        <input type="reset" class="btn btn-danger" value="Clare" />
+    </center>
+
+</form>
+
+

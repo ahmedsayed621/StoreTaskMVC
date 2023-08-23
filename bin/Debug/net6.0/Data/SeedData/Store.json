@@ -1,0 +1,33 @@
+[
+  {
+    "StoreName": "Main Store",
+    "Address": "Al Gammal St- Cairo -Egypt",
+    "IsMain": true,
+    "IsInvoiceDirect": true
+  },
+  {
+    "StoreName": "Electric Store",
+    "Address": "Ain Shams St- Cairo -Egypt",
+    "IsMain": false,
+    "IsInvoiceDirect": true
+  },
+
+  {
+    "StoreName": "Food Store",
+    "Address": "Port said St- Cairo -Egypt",
+    "IsMain": false,
+    "IsInvoiceDirect": false
+  },
+  {
+    "StoreName": "Machines Store",
+    "Address": "Al Gomhouria St- Cairo -Egypt",
+    "IsMain": false,
+    "IsInvoiceDirect": false
+  }
+
+
+
+
+]
+  
+

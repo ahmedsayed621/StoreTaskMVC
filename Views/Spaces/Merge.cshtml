@@ -1,0 +1,17 @@
+﻿@model Tuple<int, int>
+
+<h2>Merge Spaces</h2>
+
+@using (Html.BeginForm("Merge", "Spaces", FormMethod.Post))
+{
+    <div class="form-group">
+        <label for="spaceId1">Space 1 ID:</label>
+        <input type="text" name="spaceId1" class="form-control" value="@Model.Item1" readonly />
+    </div>
+    <div class="form-group">
+        <label for="spaceId2">Space 2 ID:</label>
+        <input type="text" name="spaceId2" class="form-control" value="@Model.Item2"  />
+    </div>
+    <button type="submit" class="btn btn-primary">Merge</button>
+}
+

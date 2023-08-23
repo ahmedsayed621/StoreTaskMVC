@@ -1,0 +1,67 @@
+﻿@model StoreTaskMVC.Models.Store
+
+
+<style>
+    th {
+        text-align: center !important;
+    }
+</style>
+
+<br />
+
+
+<center>
+    <a asp-controller="Stores" asp-action="Index" class="btn btn-primary">Back To Data</a>
+    <a asp-controller="Stores" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edit</a>
+</center>
+
+
+<form asp-controller="Stores" asp-action="Delete" class="form-group">
+    <div class="mb-3">
+        <label asp-for=StoreName class="form-label">Store Name</label>
+        <input asp-for=StoreName type="text" class="form-control" id="exampleFormControlInput1" placeholder="@Model.StoreName" disabled>
+    </div>
+    <div class="mb-3">
+        <label asp-for=Address class="form-label">Example textarea</label>
+        <textarea asp-for=Address class="form-control" id="exampleFormControlTextarea1" rows="3"
+        disabled>@Model.Address</textarea>
+    </div>
+
+    @{
+        if (Model.IsMain == true)
+        {
+            <div class="form-check form-switch">
+                <input asp-for=IsMain class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled" checked disabled>
+                <label class="form-check-label" asp-for=IsMain>Is Main</label>
+            </div>
+        }
+        else
+        {
+            <div class="form-check form-switch">
+                <input asp-for=IsMain class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled" disabled>
+                <label class="form-check-label" asp-for=IsMain>Is Main</label>
+            </div>
+        }
+    }
+
+    @{
+        if (Model.IsInvoiceDirect == true)
+        {
+            <div class="form-check form-switch">
+                <input asp-for=IsInvoiceDirect class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckCheckedDisabled" checked disabled>
+                <label class="form-check-label" asp-for=IsInvoiceDirect>Is Invoice Direct</label>
+            </div>
+        }
+        else
+        {
+            <div class="form-check form-switch">
+                <input asp-for=IsInvoiceDirect class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckCheckedDisabled" disabled>
+                <label class="form-check-label" asp-for=IsInvoiceDirect>Is Invoice Direct</label>
+            </div>
+        }
+    }
+    <br />
+
+    <input type="submit" value="Delete" class="btn btn-primary" />
+
+</form>
