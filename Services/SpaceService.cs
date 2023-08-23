@@ -14,14 +14,7 @@ namespace StoreTaskMVC.Services
             _dbContext = dbContext;
         }
 
-        public Space Create(Space obj)
-        {
-            _dbContext.Spaces.Add(obj);
-
-            _dbContext.SaveChanges();
-            return _dbContext.Spaces.OrderBy(a => a.Id).LastOrDefault();
-
-        }
+        
 
         public Space Delete(Space obj)
         {

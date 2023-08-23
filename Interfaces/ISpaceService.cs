@@ -6,7 +6,6 @@ namespace StoreTaskMVC.Interfaces
     {
         IEnumerable<Space> Get();
         Space GetById(int id);
-        Space Create(Space obj);
         Space Update(Space obj);
         Space Delete(Space obj);
         Space Split(int id, int numberOfSplits);
