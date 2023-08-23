@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "f:\\Ahmed\\Projects\\DotNet\\StoreTaskMVC\\StoreTaskMVC.csproj": {}
+    "F:\\Ahmed\\Projects\\DotNet\\StoreTaskMVC\\StoreTaskMVC.csproj": {}
   },
   "projects": {
-    "f:\\Ahmed\\Projects\\DotNet\\StoreTaskMVC\\StoreTaskMVC.csproj": {
+    "F:\\Ahmed\\Projects\\DotNet\\StoreTaskMVC\\StoreTaskMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "f:\\Ahmed\\Projects\\DotNet\\StoreTaskMVC\\StoreTaskMVC.csproj",
+        "projectUniqueName": "F:\\Ahmed\\Projects\\DotNet\\StoreTaskMVC\\StoreTaskMVC.csproj",
         "projectName": "StoreTaskMVC",
-        "projectPath": "f:\\Ahmed\\Projects\\DotNet\\StoreTaskMVC\\StoreTaskMVC.csproj",
+        "projectPath": "F:\\Ahmed\\Projects\\DotNet\\StoreTaskMVC\\StoreTaskMVC.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "f:\\Ahmed\\Projects\\DotNet\\StoreTaskMVC\\obj\\",
+        "outputPath": "F:\\Ahmed\\Projects\\DotNet\\StoreTaskMVC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jn7L7rP+QDkCTq4s7GJSxyGPWdBt6/ErmHKv5TVYI4AacFyMuxNxBjbSongpB6h2RL18akbaV6zejSewEjIztA==",
+  "dgSpecHash": "yzy9rFmLrQ7qJSSMnZW8cHuzBqeB5QTmWqQx+Q8VX+hQK9OsU5LEFACYIYllV1SEZRQu84Vn3fvl46lytr69pQ==",
   "success": true,
-  "projectFilePath": "f:\\Ahmed\\Projects\\DotNet\\StoreTaskMVC\\StoreTaskMVC.csproj",
+  "projectFilePath": "F:\\Ahmed\\Projects\\DotNet\\StoreTaskMVC\\StoreTaskMVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
